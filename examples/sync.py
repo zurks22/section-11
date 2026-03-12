@@ -4,6 +4,14 @@ Intervals.icu → GitHub/Local JSON Export
 Exports training data for LLM access.
 Supports both automated GitHub sync and manual local export.
 
+Version 3.81 - Feel removed from readiness decision signal chain.
+  Feel is a retrospective activity-level field, not a morning readiness marker.
+  A feel value from days ago should not drive today's go/modify/skip recommendation.
+  - Removed _get_latest_feel() method
+  - Removed feel signal from readiness_decision.signals (7 → 6 signals: HRV, RHR, Sleep, ACWR, RI, TSB)
+  - Removed feel-only case from _build_modification()
+  - Feel remains in: activity data, weekly history tier, all report templates (retrospective/trend use)
+
 Version 3.80 - --update orphan cleanup: detects and removes local files no longer in the upstream
   manifest (e.g. files moved or deleted in a repo restructure), and standalone empty directories.
   Runs after the pull step, shows orphaned items with [removed from repo] / [empty directory] tags,
@@ -99,7 +107,7 @@ class IntervalsSync:
     HISTORY_FILE = "history.json"
     UPSTREAM_REPO = "CrankAddict/section-11"
     CHANGELOG_FILE = "changelog.json"
-    VERSION = "3.80"
+    VERSION = "3.81"
 
     # Sport family mapping for per-sport monotony calculation
     # Multi-sport athletes get inflated total monotony when cross-training
@@ -2830,15 +2838,6 @@ class IntervalsSync:
     
     # === READINESS DECISION (v3.72) ===
     
-    def _get_latest_feel(self, activities: List[Dict]) -> Optional[int]:
-        """Get most recent non-null feel value from activities.
-        Intervals.icu convention: 1=Strong(best), 5=Weak(worst)."""
-        for act in reversed(activities):
-            feel = act.get("feel")
-            if feel is not None:
-                return feel
-        return None
-    
     def _get_phase_modifiers(self, phase: Optional[str], race_week_active: bool) -> Dict:
         """Return threshold modifiers based on current phase and race proximity.
         
@@ -2894,9 +2893,6 @@ class IntervalsSync:
         sleep_secs = latest_wellness.get("sleepSecs")
         sleep_hours = round(sleep_secs / 3600, 2) if sleep_secs else None
         sleep_quality = latest_wellness.get("sleepQuality")
-        
-        # Feel from most recent activity (1=Strong/best, 5=Weak/worst)
-        feel = self._get_latest_feel(activities)
         
         # Phase modifiers
         modifiers = self._get_phase_modifiers(current_phase, race_week_active)
@@ -2959,18 +2955,6 @@ class IntervalsSync:
             signals["acwr"] = {"status": acwr_status, "value": acwr}
         else:
             signals["acwr"] = {"status": "unavailable", "value": None}
-        
-        # Feel signal (1=Strong/best, 5=Weak/worst — Intervals.icu convention)
-        if feel is not None:
-            if feel >= 5:
-                feel_status = "red"
-            elif feel >= 4:
-                feel_status = "amber"
-            else:
-                feel_status = "green"
-            signals["feel"] = {"status": feel_status, "value": feel}
-        else:
-            signals["feel"] = {"status": "unavailable", "value": None}
         
         # RI signal (Section 8: >= 0.8 good, 0.6-0.79 moderate fatigue, < 0.6 deload)
         if ri is not None:
@@ -3203,7 +3187,6 @@ class IntervalsSync:
         has_rhr = "rhr" in triggers
         has_acwr = "acwr" in triggers
         has_tsb = "tsb" in triggers
-        has_feel = "feel" in triggers
         has_ri = "ri" in triggers
         
         autonomic = has_hrv or has_rhr or has_ri
@@ -3229,10 +3212,6 @@ class IntervalsSync:
         # TSB-only: reduce volume
         if has_tsb and not autonomic and not has_sleep:
             return {"triggers": triggers, "suggested_adjustments": {"intensity": "preserve", "volume": "reduce", "cap_zone": None}}
-        
-        # Feel-only: reduce intensity
-        if has_feel:
-            return {"triggers": triggers, "suggested_adjustments": {"intensity": "reduce", "volume": "preserve", "cap_zone": None}}
         
         # Fallback: reduce both
         return {"triggers": triggers, "suggested_adjustments": {"intensity": "reduce", "volume": "reduce", "cap_zone": None}}

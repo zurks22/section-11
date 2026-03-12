@@ -9,7 +9,7 @@
 **v11.13 — Readiness Decision (AAS Formalization):**
 - Pre-computed `readiness_decision` replaces implicit go/modify/skip synthesis
 - Priority ladder: P0 (safety stop) → P1 (acute overload) → P2 (accumulated fatigue) → P3 (green light)
-- 7 signals evaluated: HRV, RHR, Sleep, TSB, ACWR, Feel, RI — each with green/amber/red/unavailable status
+- 6 signals evaluated: HRV, RHR, Sleep, TSB, ACWR, RI — each with green/amber/red/unavailable status
 - Phase modifiers: Build loosens thresholds (3 amber), Taper/Race week tighten (1 amber), all others default (2 amber)
 - Structured modification output: trigger categories + adjustment directions (intensity/volume/cap_zone)
 - Wires into existing alerts (P0/P1 read tier-1 alarms, no duplication)
@@ -794,7 +794,6 @@ AI systems must only consider caloric-reduction or weight-optimization phases du
 | Sleep | ≥ 7h AND quality ≤ 2 | 5–7h OR quality 3 | < 5h OR quality 4 |
 | TSB | > phase threshold (default -15) | Between threshold and -30 | < -30 |
 | ACWR | 0.8–1.3 | <0.8 or 1.3–1.5 | > 1.5 |
-| Feel | ≤ 3 (1=Strong, 5=Weak) | 4 | 5 |
 | RI | ≥ 0.8 | 0.6–0.79 | < 0.6 |
 
 Missing signals are classified as `unavailable` and excluded from amber/red counts.
@@ -821,7 +820,6 @@ When recommendation is `modify`, the output includes trigger categories and adju
 | TSB-only | preserve | reduce | — |
 | ACWR-driven | reduce | reduce | Z2 |
 | Combined (2+) | reduce | reduce | — |
-| Feel-only | reduce | preserve | — |
 
 **Race week interaction:** Readiness can escalate (Go → Modify → Skip) during race week but cannot loosen race protocol targets. When `race_week_defers: true`, modification guidance defers to the race-week protocol's day-by-day targets. The race protocol sets the ceiling; readiness can only push it down.
 
@@ -997,7 +995,7 @@ It governs acute, session-level performance safety, ensuring localized overreach
 **Integration:**
 Daily metrics synchronised through data hierarchy and mirrored in JSON dataset each morning. AI-coach systems must reference latest values before prescribing or validating any session.
 
-If HRV unavailable, "Feel" substitutes as primary readiness indicator.
+If HRV unavailable, Sleep quality substitutes as primary subjective readiness indicator.
 
 ---
 
@@ -1050,7 +1048,7 @@ Any training modification requires reconfirming **HRV**, **RHR**, and **subjecti
 **⚠️ Metric Hierarchy:**  
 These metrics are **secondary** to the primary readiness markers defined in Section 8 (Readiness & Recovery Thresholds). AI systems must evaluate in this order:
 
-1. **Primary readiness:** RI, HRV, RHR, Feel
+1. **Primary readiness:** RI, HRV, RHR, Sleep
 2. **Secondary load metrics:** Stress Tolerance, Load-Recovery Ratio, Consistency Index
 3. **Tertiary diagnostics:** Zone Distribution Metrics, Durability Sub-Metrics, Capability Metrics (Aggregate Durability, TID Drift)
 
@@ -1641,7 +1639,7 @@ When a plan requires a structured session (per Section 4), the AI must select fr
 
 **Selection rules:**
 - Match target adaptation (Sweet Spot, VO₂max, Endurance, etc.) to the session slot identified by the plan.
-- Use Section 11 A readiness outputs (TSB, RI, HRV trend, Feel score) to choose the appropriate format variant and intensity level within that adaptation category.
+- Use Section 11 A readiness outputs (TSB, RI, HRV trend) to choose the appropriate format variant and intensity level within that adaptation category.
 - Apply the Reference Library's session sequencing rules when placing sessions within the microcycle.
 - Warm-up and cool-down structures must follow the Reference Library's WU/CD protocols unless the athlete has documented personal preferences.
 
@@ -1774,7 +1772,7 @@ This subsection defines the formal self-validation and audit metadata structure 
 | `readiness_decision`           | object   | Pre-computed go/modify/skip decision (v3.72+). Top-level, alongside `alerts`. |
 | `readiness_decision.recommendation` | string | "go" / "modify" / "skip" — baseline recommendation for pre-workout reports. |
 | `readiness_decision.priority`  | number   | 0 (safety stop), 1 (acute overload), 2 (accumulated fatigue), 3 (green light). |
-| `readiness_decision.signals`   | object   | Per-signal status objects (hrv, rhr, sleep, tsb, acwr, feel, ri). Each has `status` (green/amber/red/unavailable) and raw values with deltas. |
+| `readiness_decision.signals`   | object   | Per-signal status objects (hrv, rhr, sleep, tsb, acwr, ri). Each has `status` (green/amber/red/unavailable) and raw values with deltas. |
 | `readiness_decision.signal_summary` | object | Pre-counted tallies: `green`, `amber`, `red`, `unavailable`. |
 | `readiness_decision.phase_context` | object | `phase`, `phase_week`, `amber_threshold`, `modifier_applied` — shows which phase rule shifted thresholds. |
 | `readiness_decision.race_week_defers` | boolean | When true, modification guidance defers to race-week protocol day-by-day targets. |
