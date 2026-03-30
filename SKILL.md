@@ -1,6 +1,6 @@
 ---
 name: section-11
-description: Evidence-based endurance coaching protocol (v11.22). Use when analyzing training data, reviewing sessions, generating pre/post-workout reports, planning workouts, answering training questions, or giving endurance coaching advice. Always read or fetch athlete JSON data before responding to any training question.
+description: Evidence-based endurance coaching protocol (v11.23). Use when analyzing training data, reviewing sessions, generating pre/post-workout reports, planning workouts, answering training questions, or giving endurance coaching advice. Always read or fetch athlete JSON data before responding to any training question.
 ---
 
 # Section 11 — AI Coaching Protocol
@@ -37,6 +37,10 @@ On first use:
    - Ask athlete for their specific values (location, timezone, riding hours, weather thresholds, notification hours)
    - Save as HEARTBEAT.md in the agent workspace
 
+4. **Configure data discipline rule** (agentic platforms with persistent identity)
+   - Add to the agent's persistent configuration (SOUL.md, system prompt, custom instructions, or equivalent):
+   - *"Every training metric cited — watts, duration, TSS, HR, zones — must come from a JSON data read in the current response. No data read = no number. Conversation history, memory, and prior messages are not data sources."*
+
 Do not proceed with coaching until dossier and data source are complete.
 
 ## Protocol
@@ -50,7 +54,7 @@ Load the coaching protocol using this precedence:
 
 If both root and `section11/` copies exist, prefer the root copy.
 
-**Current version:** 11.22
+**Current version:** 11.23
 
 ## External Sources
 
@@ -71,6 +75,7 @@ All external files referenced by this skill (`sync.py`, `SECTION_11.md`, templat
 - Load `intervals.json` when analysing a specific activity with `has_intervals: true`. Use for: interval compliance, pacing analysis, cardiac drift per set, recovery quality. Do not load for readiness, load management, or weekly summaries.
 - For all files (JSON data, protocol, dossier, templates): data directory → connected repo → uploaded/attached files → URL fetch.
 - No virtual math on pre-computed metrics — use values from the JSON for CTL, ATL, TSB, ACWR, RI, zones, etc. Custom analysis from raw data is fine when pre-computed values don't cover the question.
+- Every training metric cited — in reports, recommendations, or conversation — must come from a JSON data read in the current response. Conversation history, memory, and prior messages are not data sources.
 - Check `zone_preference` in READ_THIS_FIRST and `zone_basis` fields on TID/zone blocks — the athlete may have configured HR-preferred zones for specific sports (e.g., running). When `zone_basis` is not the default "power", note this in reports.
 - Follow Section 11 C validation checklist before generating recommendations
 - Cite frameworks per protocol (checklist item #10)

@@ -1,10 +1,13 @@
 # Section 11 — AI Coach Protocol
 
-**Protocol Version:** 11.22  
-**Last Updated:** 2026-03-23
+**Protocol Version:** 11.23  
+**Last Updated:** 2026-03-30
 **License:** [MIT](https://opensource.org/licenses/MIT)
 
 ### Changelog
+
+**v11.23 — Checklist 5b: No Conversational Data Substitution**  
+- New self-validation checklist item 5b: training metrics must come from the current JSON data read — never from conversation history, prior messages, cached session context, or AI memory/recall. No data read = no metric cited.
 
 **v11.22 — Sustainability Profile (Race Estimation):**
 - New capability metric: `sustainability_profile` — per-sport power/HR sustainability table for race performance estimation
@@ -616,6 +619,7 @@ Before providing recommendations, AI systems must verify:
 | 3  | No Virtual Math Policy           | Ensure all computed metrics originate from raw or mirrored data. No interpolation, smoothing, or estimation permitted.                                 |
 | 4  | Tolerance Compliance             | Recommendations must remain within: ±3 W power, ±1 bpm HR, ±1% dataset variance.                                                                       |
 | 5  | Missing-Data Handling            | If a metric is unavailable or outdated, explicitly request it from athlete. Never assume or project unseen values.                                     |
+| 5b | No Conversational Data Substitution | Training metrics must come from the current JSON data read. Never use values from conversation history, prior messages, cached session context, or AI memory/recall. No data read in this response = no metric cited. If a value isn't in the JSON files at query time, state "data unavailable." |
 | 6  | Temporal Data Validation         | Verify "last_updated" timestamp is <24 hours old. If data is >48 hours, request a refresh. Flag if athlete context (illness, travel) contradicts data. |               
 | 6b | UTC Time Synchronization         | Confirm dataset and system clocks align to UTC. Flag if offset >60 min or timestamps appear ahead of query time.                                       |
 | 7  | Multi-Metric Conflict Resolution | If HRV/RHR conflict with athlete-reported state, prioritize athlete-provided readiness. Note discrepancy, request clarification. Never override illness/fatigue with “good” TSB. |
@@ -2138,7 +2142,7 @@ This subsection defines the formal self-validation and audit metadata structure 
     "data_source_fetched": true,
     "json_fetch_status": "success",
     "protocol_version": "11.11",
-    "checklist_passed": [1, 2, 3, 4, 5, 6, "6b", 7, 8, 9, 10],
+    "checklist_passed": [1, 2, 3, 4, 5, "5b", 6, "6b", 7, 8, 9, 10],
     "checklist_failed": [],
     "data_timestamp": "2026-01-13T22:32:05Z",
     "data_age_hours": 2.3,
