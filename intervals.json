@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-12T21:48:03.993717",
+  "generated_at": "2026-04-12T22:33:52.431317",
   "version": "3.101",
   "script_hash": "1733e822a89e",
   "scan_hours": 72,
@@ -547,6 +547,27 @@
           "zone": 2,
           "training_load": 37.25853,
           "decoupling": 5.8077364
+        }
+      ]
+    },
+    {
+      "activity_id": "i139297557",
+      "date": "2026-04-12",
+      "type": "VirtualRun",
+      "name": "Course \u00e0 pied sur tapis roulant",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 4630,
+          "avg_power": 347,
+          "max_power": 414,
+          "avg_hr": 145,
+          "max_hr": 163,
+          "avg_cadence": 86.59892,
+          "zone": 2,
+          "training_load": 66.74963,
+          "decoupling": 10.977514
         }
       ]
     }
