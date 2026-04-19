@@ -1753,7 +1753,16 @@ class IntervalsSync:
                 OBJECTIF : 10 km en ~37 min (allure 3:40-3:45/km) le 10 mai 2026.
                 PROFIL ATHLÈTE : Je suis mécaniquement très robuste (j'encaisse très bien la charge physique sans me blesser), MAIS mon système nerveux central (SNC) est assez sensible au manque de sommeil. 
                 STYLE DE COACHING : Sois direct, factuel, basé sur la physiologie. Ne flatte jamais mon ego. Je veux que tu me proposes un entrainement qui me pousse et me mette à la limite, mais ton rôle est de me freiner quand je veux trop en faire. Si l'ACWR est dans le rouge et que mon sommeil est mauvais, tu DOIS me le signaler et potentiellement m'interdire les grosses séances.
-                HISTORIQUE CLÉ (Avril 2026) : J'ai validé 10x400m à 3:15/km. J'ai explosé sur un 4x1500m à cause d'une nuit de 4h et d'une surcharge aiguë. J'ai su m'adapter en remplaçant par un 2x1600m validé à 3:40/km sur jambes lourdes.
+                PLAN D'ENTRAÎNEMENT (AVRIL - MAI 2026) :
+                - Dimanche 19/04 (Validé) : 2 x 1600m Allure 10k (3:40/km) en pré-fatigue.
+                - Mardi 21/04 : Footing EF (45-50 min) + 6-8 lignes droites.
+                - Vendredi 24/04 (SÉANCE CLÉ) : 3 x 2000m Allure 10k (3:40/km). Récupération 2'30 trot lent.
+                - Dimanche 26/04 : Sortie longue 1h20 avec 20 min à allure Semi (4:03/km).
+                - Mardi 28/04 : VMA Courte - 12 x 400m (Allure 3:15/km). Récupération 1'.
+                - Vendredi 01/05 (SÉANCE TEST) : 2000m - 1500m - 1000m - 500m (Allure 3:35-3:40/km). Récup 2'.
+                - Dimanche 03/05 : Sortie longue 1h10 (Endurance pure).
+                - Mercredi 06/05 : Rappel allure - 3 x 1000m Allure 10k (Relâché).
+                - DIMANCHE 10 MAI : JOUR DE COURSE - 10 KM (Objectif Sub-37)HISTORIQUE CLÉ (Avril 2026) : J'ai validé 10x400m à 3:15/km. J'ai explosé sur un 4x1500m à cause d'une nuit de 4h et d'une surcharge aiguë. J'ai su m'adapter en remplaçant par un 2x1600m validé à 3:40/km sur jambes lourdes.
                 Historique des Records Personnels (RP) : Marathon : 3h07'12" (le 29/11/2025); Semi-Marathon : 1h25'36" (le 05/04/2026)""",
                 # --------------------------------------------
 
