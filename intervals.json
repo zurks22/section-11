@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T08:40:13.214013",
+  "generated_at": "2026-06-05T11:48:20.330023",
   "version": "3.101",
   "script_hash": "99ee8e8242e2",
   "scan_hours": 72,
@@ -1285,6 +1285,25 @@
           "zone": 2,
           "training_load": 0.12098299,
           "decoupling": 0.42491394
+        }
+      ]
+    },
+    {
+      "activity_id": "i154524866",
+      "date": "2026-06-05",
+      "type": "Ride",
+      "name": "Marseille Cyclisme",
+      "interval_summary": [
+        "1x 8m21s 97bpm"
+      ],
+      "intervals": [
+        {
+          "type": "WORK",
+          "label": "501s@97bpm",
+          "duration_secs": 501,
+          "avg_hr": 97,
+          "max_hr": 157,
+          "zone": 1
         }
       ]
     }
