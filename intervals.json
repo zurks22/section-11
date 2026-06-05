@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T14:34:15.844886",
+  "generated_at": "2026-06-05T17:02:34.942048",
   "version": "3.101",
   "script_hash": "99ee8e8242e2",
   "scan_hours": 72,
@@ -1304,6 +1304,83 @@
           "avg_hr": 97,
           "max_hr": 157,
           "zone": 1
+        }
+      ]
+    },
+    {
+      "activity_id": "i154601004",
+      "date": "2026-06-05",
+      "type": "Run",
+      "name": "Marseille Course \u00e0 pied",
+      "interval_summary": [
+        "3x 5m58s 358w",
+        "1x 14m38s 363w",
+        "1x 3m9s 425w"
+      ],
+      "intervals": [
+        {
+          "type": "WORK",
+          "label": "358s@358w84rpm",
+          "duration_secs": 360,
+          "avg_power": 347,
+          "max_power": 494,
+          "avg_hr": 131,
+          "max_hr": 146,
+          "avg_cadence": 82.868095,
+          "zone": 2,
+          "training_load": 4.4872336,
+          "decoupling": 24.814878
+        },
+        {
+          "type": "WORK",
+          "label": "358s@358w84rpm",
+          "duration_secs": 366,
+          "avg_power": 367,
+          "max_power": 429,
+          "avg_hr": 145,
+          "max_hr": 152,
+          "avg_cadence": 84.91428,
+          "zone": 3,
+          "training_load": 5.4010262,
+          "decoupling": 2.8083184
+        },
+        {
+          "type": "WORK",
+          "label": "358s@358w84rpm",
+          "duration_secs": 349,
+          "avg_power": 361,
+          "max_power": 435,
+          "avg_hr": 149,
+          "max_hr": 156,
+          "avg_cadence": 84.39542,
+          "zone": 2,
+          "training_load": 5.4757285,
+          "decoupling": 3.1317055
+        },
+        {
+          "type": "WORK",
+          "label": "878s@363w85rpm",
+          "duration_secs": 878,
+          "avg_power": 363,
+          "max_power": 509,
+          "avg_hr": 148,
+          "max_hr": 162,
+          "avg_cadence": 84.69653,
+          "zone": 3,
+          "training_load": 5.3987904
+        },
+        {
+          "type": "WORK",
+          "label": "189s@425w80rpm",
+          "duration_secs": 189,
+          "avg_power": 425,
+          "max_power": 703,
+          "avg_hr": 166,
+          "max_hr": 175,
+          "avg_cadence": 79.702705,
+          "zone": 3,
+          "training_load": 2.9183674,
+          "decoupling": 10.219256
         }
       ]
     }
