@@ -1,85 +1,10 @@
 {
-  "generated_at": "2026-06-23T23:39:55.436967",
+  "generated_at": "2026-06-24T01:30:13.908654",
   "version": "3.101",
   "script_hash": "99ee8e8242e2",
   "scan_hours": 72,
   "retention_days": 14,
   "activities": [
-    {
-      "activity_id": "i155605542",
-      "date": "2026-06-09",
-      "type": "Run",
-      "name": "Marseille Course \u00e0 pied",
-      "interval_summary": [
-        "3x 5m32s 361w",
-        "1x 5m23s 439w"
-      ],
-      "intervals": [
-        {
-          "type": "WORK",
-          "label": "332s@361w83rpm",
-          "duration_secs": 351,
-          "avg_power": 337,
-          "max_power": 416,
-          "avg_hr": 131,
-          "max_hr": 150,
-          "avg_cadence": 81.84901,
-          "zone": 2,
-          "training_load": 4.6344566,
-          "decoupling": 2.454947
-        },
-        {
-          "type": "RECOVERY",
-          "duration_secs": 1,
-          "avg_power": 352,
-          "max_power": 352,
-          "avg_hr": 148,
-          "max_hr": 148,
-          "avg_cadence": 84.0,
-          "zone": 2,
-          "training_load": 0.01839028
-        },
-        {
-          "type": "WORK",
-          "label": "332s@361w83rpm",
-          "duration_secs": 327,
-          "avg_power": 362,
-          "max_power": 404,
-          "avg_hr": 146,
-          "max_hr": 155,
-          "avg_cadence": 83.10703,
-          "zone": 2,
-          "training_load": 5.1872444,
-          "decoupling": -2.0299232
-        },
-        {
-          "type": "WORK",
-          "label": "332s@361w83rpm",
-          "duration_secs": 317,
-          "avg_power": 383,
-          "max_power": 434,
-          "avg_hr": 154,
-          "max_hr": 157,
-          "avg_cadence": 83.719246,
-          "zone": 3,
-          "training_load": 5.5368156,
-          "decoupling": -4.351947
-        },
-        {
-          "type": "WORK",
-          "label": "323s@439w79rpm",
-          "duration_secs": 323,
-          "avg_power": 439,
-          "max_power": 758,
-          "avg_hr": 156,
-          "max_hr": 173,
-          "avg_cadence": 78.86466,
-          "zone": 4,
-          "training_load": 5.96574,
-          "decoupling": -0.77762854
-        }
-      ]
-    },
     {
       "activity_id": "i156102689",
       "date": "2026-06-10",
