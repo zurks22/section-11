@@ -69,7 +69,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-06-30T23:04:45.589834",
+    "last_updated": "2026-07-01T00:20:14.923116",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.101"
@@ -92,14 +92,14 @@
       "hrv": {
         "status": "unavailable",
         "value": null,
-        "baseline_7d": 28.8,
+        "baseline_7d": 29.2,
         "delta_pct": null
       },
       "rhr": {
-        "status": "amber",
-        "value": 62,
-        "baseline_7d": 58.7,
-        "delta_bpm": 3.3
+        "status": "unavailable",
+        "value": null,
+        "baseline_7d": 58.8,
+        "delta_bpm": null
       },
       "sleep": {
         "status": "unavailable",
@@ -113,18 +113,18 @@
       "ri": {
         "status": "unavailable",
         "value": null,
-        "value_yesterday": 1.33
+        "value_yesterday": null
       },
       "tsb": {
         "status": "green",
-        "value": 15.5
+        "value": 16.9
       }
     },
     "signal_summary": {
       "green": 2,
-      "amber": 1,
+      "amber": 0,
       "red": 0,
-      "unavailable": 3
+      "unavailable": 4
     },
     "phase_context": {
       "phase": "Base",
@@ -134,13 +134,13 @@
     },
     "race_week_defers": false,
     "modification": null,
-    "reason": "P3 green light. 2 green, 1 amber (threshold 2), 0 red.",
+    "reason": "P3 green light. 2 green, 0 amber (threshold 2), 0 red. Note: 4 signals unavailable \u2014 limited data.",
     "alarm_refs": []
   },
   "history": {
     "available": true,
     "last_generated": "2026-06-29",
-    "age_days": 1,
+    "age_days": 2,
     "total_months": 34,
     "history_confidence": "high"
   },
@@ -160,15 +160,15 @@
   },
   "current_status": {
     "fitness": {
-      "ctl": 30.99,
-      "atl": 15.47,
-      "tsb": 15.52,
-      "ramp_rate": -4.7,
+      "ctl": 30.26,
+      "atl": 13.41,
+      "tsb": 16.85,
+      "ramp_rate": -4.59,
       "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
-      "eftp": 108.5,
-      "w_prime": 9273,
+      "eftp": 108.4,
+      "w_prime": 9264,
       "w_prime_kj": 9.3,
       "p_max": 376,
       "vo2max": null,
@@ -223,7 +223,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": 12376,
+      "steps": null,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -236,13 +236,13 @@
   },
   "derived_metrics": {
     "recovery_index": null,
-    "recovery_index_yesterday": 1.33,
-    "hrv_baseline_7d": 28.8,
-    "rhr_baseline_7d": 58.7,
-    "hrv_baseline_28d": 38.4,
-    "rhr_baseline_28d": 53.7,
+    "recovery_index_yesterday": null,
+    "hrv_baseline_7d": 29.2,
+    "rhr_baseline_7d": 58.8,
+    "hrv_baseline_28d": 38.6,
+    "rhr_baseline_28d": 53.8,
     "latest_hrv": null,
-    "latest_rhr": 62,
+    "latest_rhr": null,
     "acwr": 0.14,
     "acwr_interpretation": "undertraining",
     "monotony": 0.38,
@@ -358,12 +358,12 @@
       "power_curve_delta": {
         "window_days": 28,
         "current_window": {
-          "start": "2026-06-03",
-          "end": "2026-06-30"
+          "start": "2026-06-04",
+          "end": "2026-07-01"
         },
         "previous_window": {
-          "start": "2026-05-06",
-          "end": "2026-06-02"
+          "start": "2026-05-07",
+          "end": "2026-06-03"
         },
         "anchors": null,
         "rotation_index": null,
@@ -372,12 +372,12 @@
       "hr_curve_delta": {
         "window_days": 28,
         "current_window": {
-          "start": "2026-06-03",
-          "end": "2026-06-30"
+          "start": "2026-06-04",
+          "end": "2026-07-01"
         },
         "previous_window": {
-          "start": "2026-05-06",
-          "end": "2026-06-02"
+          "start": "2026-05-07",
+          "end": "2026-06-03"
         },
         "anchors": {
           "60s": {
@@ -407,8 +407,8 @@
       "sustainability_profile": {
         "window": {
           "days": 42,
-          "start": "2026-05-20",
-          "end": "2026-06-30"
+          "start": "2026-05-21",
+          "end": "2026-07-01"
         },
         "weight_kg": 85.0,
         "weight_source": "athlete_profile",
@@ -436,7 +436,7 @@
       ],
       "basis": {
         "stream_1": {
-          "ctl_slope": -2.1,
+          "ctl_slope": -2.27,
           "acwr_trend": "falling",
           "hard_day_pattern": 1,
           "weeks_available": 4
@@ -462,7 +462,7 @@
       "PHASE_TRANSITION_Deload_TO_Base",
       "NO_PLANNED_WORKOUTS"
     ],
-    "seasonal_context": "Build / Early Race Season",
+    "seasonal_context": "Peak Race Season",
     "benchmark_indoor": {
       "current_ftp": null,
       "ftp_8_weeks_ago": null,
@@ -477,16 +477,16 @@
       "benchmark_percentage": null,
       "seasonal_expected": null
     },
-    "eftp": 108.5,
-    "w_prime": 9273,
+    "eftp": 108.4,
+    "w_prime": 9264,
     "w_prime_kj": 9.3,
     "p_max": 376,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-06-30T23:04:45.588747",
+    "calculation_timestamp": "2026-07-01T00:20:14.922032",
     "data_quality": {
-      "hrv_data_points": 6,
-      "rhr_data_points": 7,
+      "hrv_data_points": 5,
+      "rhr_data_points": 6,
       "activities_7d": 1,
       "activities_28d": 15,
       "planned_workouts_7d": 0,
@@ -760,7 +760,7 @@
           "z7_time": 0
         }
       },
-      "has_intervals": true,
+      "has_intervals": false,
       "has_dfa": false
     },
     {
@@ -1298,45 +1298,6 @@
   ],
   "wellness_data": [
     {
-      "date": "2026-06-24",
-      "weight_kg": null,
-      "resting_hr": 58,
-      "hrv_rmssd": 27.0,
-      "hrv_sdnn": null,
-      "sleep_hours": 5.77,
-      "sleep_formatted": "5h46m",
-      "sleep_quality": 4,
-      "sleep_score": 41.0,
-      "mental_energy": null,
-      "avg_sleeping_hr": null,
-      "vo2max": null,
-      "fatigue": null,
-      "soreness": null,
-      "stress": null,
-      "mood": null,
-      "motivation": null,
-      "injury": null,
-      "hydration": null,
-      "spO2": null,
-      "blood_glucose": null,
-      "systolic": null,
-      "diastolic": null,
-      "baevsky_si": null,
-      "lactate": null,
-      "respiration": null,
-      "body_fat_pct": null,
-      "abdomen_cm": null,
-      "steps": 8728,
-      "hydration_volume_l": null,
-      "kcal_consumed": null,
-      "carbohydrates_g": null,
-      "protein_g": null,
-      "fat_g": null,
-      "menstrual_phase": null,
-      "menstrual_phase_predicted": null,
-      "readiness": null
-    },
-    {
       "date": "2026-06-25",
       "weight_kg": null,
       "resting_hr": 58,
@@ -1569,6 +1530,45 @@
       "menstrual_phase": null,
       "menstrual_phase_predicted": null,
       "readiness": null
+    },
+    {
+      "date": "2026-07-01",
+      "weight_kg": null,
+      "resting_hr": null,
+      "hrv_rmssd": null,
+      "hrv_sdnn": null,
+      "sleep_hours": null,
+      "sleep_formatted": null,
+      "sleep_quality": null,
+      "sleep_score": null,
+      "mental_energy": null,
+      "avg_sleeping_hr": null,
+      "vo2max": null,
+      "fatigue": null,
+      "soreness": null,
+      "stress": null,
+      "mood": null,
+      "motivation": null,
+      "injury": null,
+      "hydration": null,
+      "spO2": null,
+      "blood_glucose": null,
+      "systolic": null,
+      "diastolic": null,
+      "baevsky_si": null,
+      "lactate": null,
+      "respiration": null,
+      "body_fat_pct": null,
+      "abdomen_cm": null,
+      "steps": null,
+      "hydration_volume_l": null,
+      "kcal_consumed": null,
+      "carbohydrates_g": null,
+      "protein_g": null,
+      "fat_g": null,
+      "menstrual_phase": null,
+      "menstrual_phase_predicted": null,
+      "readiness": null
     }
   ],
   "planned_workouts": [],
@@ -1585,8 +1585,8 @@
     "total_training_formatted": "40m",
     "total_tss": 33,
     "activities_count": 1,
-    "avg_hrv": 28.8,
-    "avg_resting_hr": 58.7
+    "avg_hrv": 29.2,
+    "avg_resting_hr": 58.8
   },
   "race_calendar": {
     "next_race": null,
