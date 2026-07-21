@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T09:38:36.170887",
+  "generated_at": "2026-07-21T11:28:20.527316",
   "version": "3.101",
   "script_hash": "99ee8e8242e2",
   "scan_hours": 72,
@@ -1804,6 +1804,147 @@
           "zone": 2,
           "training_load": 2.8354912,
           "decoupling": 1.4702498
+        }
+      ]
+    },
+    {
+      "activity_id": "i167694881",
+      "date": "2026-07-21",
+      "type": "Run",
+      "name": "N\u00e9vez Course \u00e0 pied",
+      "interval_summary": [
+        "1x 6m49s 376w",
+        "2x 6m44s 328w",
+        "2x 7m19s 282w",
+        "2x 9m3s 300w",
+        "1x 5m37s 391w",
+        "1x 16m 400w"
+      ],
+      "intervals": [
+        {
+          "type": "WORK",
+          "label": "409s@376w83rpm",
+          "duration_secs": 409,
+          "avg_power": 376,
+          "max_power": 566,
+          "avg_hr": 133,
+          "max_hr": 152,
+          "avg_cadence": 82.75,
+          "zone": 3,
+          "training_load": 6.3072,
+          "decoupling": -9.647021
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 1,
+          "avg_power": 339,
+          "max_power": 339,
+          "avg_hr": 136,
+          "max_hr": 136,
+          "avg_cadence": 84.0,
+          "zone": 2,
+          "training_load": 0.016388947
+        },
+        {
+          "type": "WORK",
+          "label": "404s@328w78rpm",
+          "duration_secs": 403,
+          "avg_power": 324,
+          "max_power": 496,
+          "avg_hr": 139,
+          "max_hr": 151,
+          "avg_cadence": 78.61042,
+          "zone": 2,
+          "training_load": 5.6361184,
+          "decoupling": -14.515583
+        },
+        {
+          "type": "WORK",
+          "label": "439s@282w74rpm",
+          "duration_secs": 434,
+          "avg_power": 278,
+          "max_power": 434,
+          "avg_hr": 132,
+          "max_hr": 141,
+          "avg_cadence": 76.54147,
+          "zone": 2,
+          "training_load": 4.4061437,
+          "decoupling": -19.822601
+        },
+        {
+          "type": "WORK",
+          "label": "543s@300w73rpm",
+          "duration_secs": 546,
+          "avg_power": 295,
+          "max_power": 461,
+          "avg_hr": 136,
+          "max_hr": 148,
+          "avg_cadence": 74.73441,
+          "zone": 2,
+          "training_load": 4.70971
+        },
+        {
+          "type": "WORK",
+          "label": "543s@300w73rpm",
+          "duration_secs": 540,
+          "avg_power": 304,
+          "max_power": 535,
+          "avg_hr": 131,
+          "max_hr": 148,
+          "avg_cadence": 70.9304,
+          "zone": 2,
+          "training_load": 5.057161
+        },
+        {
+          "type": "WORK",
+          "label": "404s@328w78rpm",
+          "duration_secs": 405,
+          "avg_power": 331,
+          "max_power": 515,
+          "avg_hr": 138,
+          "max_hr": 148,
+          "avg_cadence": 77.71605,
+          "zone": 2,
+          "training_load": 5.9073725,
+          "decoupling": 7.243784
+        },
+        {
+          "type": "WORK",
+          "label": "439s@282w74rpm",
+          "duration_secs": 444,
+          "avg_power": 286,
+          "max_power": 508,
+          "avg_hr": 136,
+          "max_hr": 150,
+          "avg_cadence": 70.78211,
+          "zone": 2,
+          "training_load": 4.530911,
+          "decoupling": -16.552465
+        },
+        {
+          "type": "WORK",
+          "label": "337s@391w83rpm",
+          "duration_secs": 337,
+          "avg_power": 391,
+          "max_power": 606,
+          "avg_hr": 149,
+          "max_hr": 164,
+          "avg_cadence": 83.01781,
+          "zone": 3,
+          "training_load": 6.549315,
+          "decoupling": 1.1771457
+        },
+        {
+          "type": "WORK",
+          "label": "960s@400w78rpm",
+          "duration_secs": 960,
+          "avg_power": 400,
+          "max_power": 655,
+          "avg_hr": 133,
+          "max_hr": 153,
+          "avg_cadence": 78.07829,
+          "zone": 3,
+          "training_load": 5.3443966
         }
       ]
     }
