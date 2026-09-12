@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T09:18:09.127353",
+  "generated_at": "2026-09-12T12:58:10.488838",
   "version": "3.101",
   "script_hash": "99ee8e8242e2",
   "scan_hours": 72,
@@ -2804,6 +2804,54 @@
           "avg_cadence": 56.666668,
           "zone": 1,
           "training_load": 0.053450633
+        }
+      ]
+    },
+    {
+      "activity_id": "i185847584",
+      "date": "2026-09-12",
+      "type": "Run",
+      "name": "Marseille Course \u00e0 pied sur piste",
+      "interval_summary": [
+        "1x 43m35s 357w",
+        "1x 13m33s 414w"
+      ],
+      "intervals": [
+        {
+          "type": "WORK",
+          "label": "2615s@357w85rpm",
+          "duration_secs": 2615,
+          "avg_power": 357,
+          "max_power": 726,
+          "avg_hr": 132,
+          "max_hr": 169,
+          "avg_cadence": 85.060844,
+          "zone": 2,
+          "training_load": 29.769936,
+          "decoupling": -1.7960209
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 1,
+          "avg_power": 644,
+          "max_power": 644,
+          "avg_hr": 164,
+          "max_hr": 164,
+          "avg_cadence": 97.0,
+          "zone": 6,
+          "training_load": 0.027091933
+        },
+        {
+          "type": "WORK",
+          "label": "813s@414w85rpm",
+          "duration_secs": 813,
+          "avg_power": 414,
+          "max_power": 861,
+          "avg_hr": 157,
+          "max_hr": 180,
+          "avg_cadence": 85.018814,
+          "zone": 3,
+          "training_load": 10.419086
         }
       ]
     }
