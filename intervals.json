@@ -1,47 +1,10 @@
 {
-  "generated_at": "2026-09-19T23:05:58.886247",
+  "generated_at": "2026-09-20T01:05:52.248337",
   "version": "3.101",
   "script_hash": "99ee8e8242e2",
   "scan_hours": 72,
   "retention_days": 14,
   "activities": [
-    {
-      "activity_id": "i183518218",
-      "date": "2026-09-05",
-      "type": "Run",
-      "name": "Marseille - Sem. 6 Sam S\u00e9ance de running fa",
-      "interval_summary": [
-        "1x 1h1m 367w",
-        "1x 7m21s 371w"
-      ],
-      "intervals": [
-        {
-          "type": "WORK",
-          "label": "3711s@367w85rpm",
-          "duration_secs": 3711,
-          "avg_power": 367,
-          "max_power": 594,
-          "avg_hr": 132,
-          "max_hr": 147,
-          "avg_cadence": 85.00587,
-          "zone": 3,
-          "training_load": 30.252941
-        },
-        {
-          "type": "WORK",
-          "label": "441s@371w87rpm",
-          "duration_secs": 441,
-          "avg_power": 371,
-          "max_power": 465,
-          "avg_hr": 151,
-          "max_hr": 159,
-          "avg_cadence": 87.19399,
-          "zone": 3,
-          "training_load": 7.020109,
-          "decoupling": 5.7149787
-        }
-      ]
-    },
     {
       "activity_id": "i183818717",
       "date": "2026-09-06",
