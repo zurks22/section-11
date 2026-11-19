@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T01:14:03.314414",
+  "generated_at": "2026-11-19T08:49:28.966603",
   "version": "3.101",
   "script_hash": "99ee8e8242e2",
   "scan_hours": 72,
@@ -3380,6 +3380,134 @@
           "zone": 2,
           "training_load": 0.0580115,
           "decoupling": 0.7518797
+        }
+      ]
+    },
+    {
+      "activity_id": "i211917241",
+      "date": "2026-11-19",
+      "type": "Run",
+      "name": "Bernay Course \u00e0 pied sur piste",
+      "interval_summary": [
+        "1x 11m50s 382w",
+        "2x 15m43s 523w",
+        "1x 4m32s 289w",
+        "1x 9m17s 299w"
+      ],
+      "intervals": [
+        {
+          "type": "WORK",
+          "label": "710s@382w87rpm",
+          "duration_secs": 710,
+          "avg_power": 382,
+          "max_power": 495,
+          "avg_hr": 138,
+          "max_hr": 151,
+          "avg_cadence": 87.0597,
+          "zone": 3,
+          "training_load": 10.026352,
+          "decoupling": -2.0542684
+        },
+        {
+          "type": "WORK",
+          "label": "943s@523w90rpm",
+          "duration_secs": 943,
+          "avg_power": 522,
+          "max_power": 614,
+          "avg_hr": 176,
+          "max_hr": 181,
+          "avg_cadence": 91.19088,
+          "zone": 5,
+          "training_load": 30.595387,
+          "decoupling": 2.675352
+        },
+        {
+          "type": "WORK",
+          "label": "272s@289w80rpm",
+          "duration_secs": 272,
+          "avg_power": 289,
+          "max_power": 561,
+          "avg_hr": 138,
+          "max_hr": 179,
+          "avg_cadence": 79.75862,
+          "zone": 2,
+          "training_load": 2.242561,
+          "decoupling": -9.55553
+        },
+        {
+          "type": "WORK",
+          "label": "943s@523w90rpm",
+          "duration_secs": 942,
+          "avg_power": 524,
+          "max_power": 610,
+          "avg_hr": 175,
+          "max_hr": 182,
+          "avg_cadence": 89.1656,
+          "zone": 5,
+          "training_load": 30.56294,
+          "decoupling": 2.426769
+        },
+        {
+          "type": "WORK",
+          "label": "557s@299w80rpm",
+          "duration_secs": 557,
+          "avg_power": 299,
+          "max_power": 584,
+          "avg_hr": 140,
+          "max_hr": 177,
+          "avg_cadence": 80.3039,
+          "zone": 2,
+          "training_load": 5.6832857,
+          "decoupling": 2.0200841
+        }
+      ]
+    },
+    {
+      "activity_id": "i211906838",
+      "date": "2026-11-19",
+      "type": "Run",
+      "name": "Bernay - Sem. 17 Jeu Tempo - R\u00e9p\u00e9tition",
+      "interval_summary": [
+        "1x 7m52s 399w",
+        "1x 6m53s 397w"
+      ],
+      "intervals": [
+        {
+          "type": "WORK",
+          "label": "472s@399w80rpm",
+          "duration_secs": 472,
+          "avg_power": 399,
+          "max_power": 516,
+          "avg_hr": 133,
+          "max_hr": 151,
+          "avg_cadence": 80.02233,
+          "zone": 3,
+          "training_load": 7.793102,
+          "decoupling": 13.00928
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 1,
+          "avg_power": 197,
+          "max_power": 197,
+          "avg_hr": 127,
+          "max_hr": 127,
+          "avg_cadence": 59.0,
+          "zone": 1,
+          "training_load": 0.012576794
+        },
+        {
+          "type": "WORK",
+          "label": "413s@397w85rpm",
+          "duration_secs": 413,
+          "avg_power": 397,
+          "max_power": 453,
+          "avg_hr": 136,
+          "max_hr": 147,
+          "avg_cadence": 85.196075,
+          "zone": 3,
+          "training_load": 4.785468,
+          "decoupling": 7.0583773
         }
       ]
     }
