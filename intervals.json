@@ -1,47 +1,10 @@
 {
-  "generated_at": "2026-11-18T19:14:38.332694",
+  "generated_at": "2026-11-19T01:14:03.314414",
   "version": "3.101",
   "script_hash": "99ee8e8242e2",
   "scan_hours": 72,
   "retention_days": 14,
   "activities": [
-    {
-      "activity_id": "i205822435",
-      "date": "2026-11-04",
-      "type": "Run",
-      "name": "Aubervilliers Course \u00e0 pied",
-      "interval_summary": [
-        "2x 6m21s 338w"
-      ],
-      "intervals": [
-        {
-          "type": "WORK",
-          "label": "381s@338w80rpm",
-          "duration_secs": 398,
-          "avg_power": 342,
-          "max_power": 427,
-          "avg_hr": 132,
-          "max_hr": 141,
-          "avg_cadence": 78.838875,
-          "zone": 2,
-          "training_load": 5.4280047,
-          "decoupling": 4.2163453
-        },
-        {
-          "type": "WORK",
-          "label": "381s@338w80rpm",
-          "duration_secs": 363,
-          "avg_power": 334,
-          "max_power": 443,
-          "avg_hr": 128,
-          "max_hr": 141,
-          "avg_cadence": 80.20112,
-          "zone": 2,
-          "training_load": 4.7838316,
-          "decoupling": -1.7882887
-        }
-      ]
-    },
     {
       "activity_id": "i206019131",
       "date": "2026-11-05",
